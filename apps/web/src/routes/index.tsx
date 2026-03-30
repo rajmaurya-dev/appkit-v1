@@ -1,6 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Check, Mail, Plus, Star, X, Zap } from "lucide-react";
+import {
+	ArrowRight,
+	Check,
+	Flame,
+	Mail,
+	Plus,
+	Star,
+	X,
+} from "lucide-react";
 import { FeaturesSection } from "@/components/features";
 import { Input } from "@/components/ui/input";
 import {
@@ -18,57 +26,59 @@ export const Route = createFileRoute("/")({
 
 /* ─── Data ─────────────────────────────────────────── */
 
-
 const pricingPlans = [
 	{
-		name: "Starter",
+		name: "Free",
 		price: "$0",
 		period: "forever",
-		lead: "For beginners.",
-		description: "Get started with the full boilerplate for personal projects.",
+		lead: "Start your practice.",
+		description:
+			"Full access to the mantra library, japa counter, and streak tracking.",
 		features: [
-			"All boilerplate code",
-			"Auth + Database setup",
-			"Community support",
-			"MIT License",
+			"30+ mantras with Devanagari & IAST",
+			"Tap-to-count japa sessions",
+			"Digital mala beads",
+			"Streak & activity tracking",
 		],
-		cta: "Get Started",
+		cta: "Download Free",
 		ctaVariant: "outline" as const,
 		popular: false,
 	},
 	{
-		name: "Pro",
-		price: "$49",
+		name: "Devotee",
+		price: "$4.99",
 		period: "one-time",
-		lead: "For indie hackers.",
-		description: "Unlock premium templates, priority support, and integrations.",
+		lead: "Deepen your sadhana.",
+		description:
+			"Unlock audio pronunciations, custom mantras, and advanced stats.",
 		features: [
-			"Everything in Starter",
-			"Premium templates",
-			"Priority support",
-			"Lifetime updates",
-			"Stripe integration",
-			"Email templates",
+			"Everything in Free",
+			"Audio pronunciation for all mantras",
+			"Custom mantra entry",
+			"Detailed session analytics",
+			"Multiple mala modes (27, 54, 108)",
+			"Daily reminder notifications",
 		],
-		cta: "Get Started",
+		cta: "Get Devotee",
 		ctaVariant: "default" as const,
 		popular: true,
 	},
 	{
-		name: "Team",
-		price: "$149",
+		name: "Lifetime",
+		price: "$9.99",
 		period: "one-time",
-		lead: "For teams.",
-		description: "Unlock multi-tenant support and advanced admin features.",
+		lead: "All future updates.",
+		description:
+			"Everything in Devotee plus cloud backup and all upcoming features.",
 		features: [
-			"Everything in Pro",
-			"Multi-tenant support",
-			"Admin dashboard",
-			"Analytics built-in",
-			"Team license (up to 5)",
-			"1-on-1 onboarding call",
+			"Everything in Devotee",
+			"Cloud backup & sync",
+			"Share session stats",
+			"Early access to new features",
+			"Support app development",
+			"Family sharing (up to 5)",
 		],
-		cta: "Get Started",
+		cta: "Get Lifetime",
 		ctaVariant: "default" as const,
 		popular: false,
 	},
@@ -76,65 +86,65 @@ const pricingPlans = [
 
 const testimonials = [
 	{
-		name: "Sarah Chen",
-		role: "Founder, Pluto AI",
+		name: "Ananya Sharma",
+		role: "Daily practitioner",
 		content:
-			"Saved us 3 weeks of setup. We went from idea to paying customers in under a month.",
+			"This app brought discipline to my morning sadhana. The mala counter with haptics feels so natural.",
 		rating: 5,
 	},
 	{
-		name: "Marcus Rivera",
-		role: "CTO, StreamLab",
+		name: "Raghav Menon",
+		role: "Yoga instructor",
 		content:
-			"The type-safety across the entire stack is incredible. Refactoring is actually enjoyable now.",
+			"Finally an app that gets Devanagari text right. I recommend it to all my students for their mantra practice.",
 		rating: 5,
 	},
 	{
-		name: "Emily Watson",
-		role: "Indie Hacker",
+		name: "Priya Patel",
+		role: "Meditation practitioner",
 		content:
-			"Best boilerplate I've used. The auth and database setup alone is worth the price.",
+			"The streak tracking keeps me motivated. 45 days and counting — my longest practice streak ever.",
 		rating: 5,
 	},
 ];
 
 const stats = [
-	{ value: "2,000+", label: "Developers" },
-	{ value: "500+", label: "Projects shipped" },
-	{ value: "99.9%", label: "Uptime" },
-	{ value: "4.9/5", label: "Avg rating" },
+	{ value: "30+", label: "Mantras & Shlokas" },
+	{ value: "108", label: "Bead Mala Counter" },
+	{ value: "100%", label: "Offline & Private" },
+	{ value: "4.9/5", label: "User Rating" },
 ];
 
 const faqs = [
 	{
-		question: "What is ShipFast, and how is it different?",
+		question: "What is Japam?",
 		answer:
-			"ShipFast is a production-ready SaaS boilerplate with auth, database, payments, and email pre-configured. Unlike other starters, it gives you a full-stack TypeScript setup with edge-first APIs on Cloudflare Workers — not just a frontend template.",
+			"Japam is a focused mantra and shloka recitation app. It provides Devanagari text with IAST transliteration and English meanings, a tap-to-count japa counter, digital mala beads, and streak tracking — all designed for a distraction-free practice.",
 	},
 	{
-		question: "Do I need to pay to get started?",
+		question: "Do I need an internet connection?",
 		answer:
-			"No. The Starter plan is completely free and includes all boilerplate code, auth, and database setup. You only pay if you want premium templates, priority support, and additional integrations.",
+			"No. Japam works fully offline. All mantras, audio, and your progress data are stored locally on your device. No account is required to get started.",
 	},
 	{
-		question: "What tech stack does ShipFast use?",
+		question: "Which mantras are included?",
 		answer:
-			"ShipFast uses React with TanStack Router and Query on the frontend, Hono on Cloudflare Workers for the API, Drizzle ORM for the database, Better Auth for authentication, and shadcn/ui for components — all fully typed with TypeScript.",
+			"Japam includes 30+ mantras across categories like Vedic Mantras, Devotional, Japa, Shlokas, and deity-specific collections (Shiva, Vishnu, Devi, Surya). Each includes the original Devanagari, IAST transliteration, source reference, and English meaning.",
 	},
 	{
-		question: "Can I use ShipFast for commercial projects?",
+		question: "How does the japa counter work?",
 		answer:
-			"Absolutely. The Starter plan is MIT licensed. Pro and Team plans include a commercial license with lifetime updates. You own everything you build.",
+			"During a session, tap anywhere on the screen to count each recitation. The app provides haptic feedback, tracks your progress toward the target (27, 54, or 108), and auto-saves so you can resume interrupted sessions.",
 	},
 	{
-		question: "How do I deploy my ShipFast project?",
+		question: "Is my data private?",
 		answer:
-			"ShipFast comes with pre-configured CI/CD pipelines for Cloudflare, Vercel, and Netlify. Just connect your repo and deploy with a single click — no DevOps knowledge required.",
+			"Absolutely. All data is stored locally on your device using AsyncStorage. We collect zero analytics or personal data. Your spiritual practice is entirely private.",
 	},
 	{
-		question: "Do you offer refunds?",
+		question: "What platforms does Japam support?",
 		answer:
-			"Yes. If you're not satisfied within 14 days of purchase, we'll give you a full refund — no questions asked.",
+			"Japam is built with Expo and React Native, supporting both iOS and Android. It runs on Expo Go for easy installation — no App Store required during the early access period.",
 	},
 ];
 
@@ -146,7 +156,7 @@ function HomePage() {
 			{/* Hero */}
 			<section className="relative overflow-hidden pt-24 pb-16 lg:pt-40 lg:pb-28">
 				<div className="pointer-events-none absolute inset-0 -z-10">
-					<div className="absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-primary/5 blur-3xl" />
+					<div className="absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-amber-500/5 blur-3xl" />
 				</div>
 
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl relative z-10">
@@ -154,21 +164,21 @@ function HomePage() {
 						variant="secondary"
 						className="mb-6 px-4 py-1.5 text-sm font-medium"
 					>
-						<Zap className="mr-1.5 h-3.5 w-3.5" />
-						Ship faster with ShipFast
+						<Flame className="mr-1.5 h-3.5 w-3.5" />
+						Mantra recitation, reimagined
 					</Badge>
 
 					<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6">
-						Build your SaaS
+						Your daily
 						<br />
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
-							in days, not months
+						<span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-500">
+							sadhana companion
 						</span>
 					</h1>
 
 					<p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-						Production-ready boilerplate with auth, payments, database, and
-						email — so you can focus on what makes your product unique.
+						Recite mantras and shlokas with Devanagari text, a digital mala, japa
+						counter, and streak tracking — all offline and completely private.
 					</p>
 
 					<div className="flex flex-col sm:flex-row justify-center gap-3">
@@ -178,7 +188,7 @@ function HomePage() {
 							asChild
 						>
 							<Link to="/auth">
-								Get Started Free
+								Start Practicing
 								<ArrowRight className="ml-2 h-4 w-4" />
 							</Link>
 						</Button>
@@ -187,7 +197,7 @@ function HomePage() {
 							variant="outline"
 							className="h-12 px-8 text-base rounded-xl"
 						>
-							View Demo
+							View Mantra Library
 						</Button>
 					</div>
 
@@ -199,7 +209,7 @@ function HomePage() {
 									key={`avatar-${i}`}
 									className="h-8 w-8 rounded-full border-2 border-background bg-muted flex items-center justify-center text-xs font-medium"
 								>
-									{String.fromCharCode(65 + i)}
+									{["🙏", "🕉️", "📿", "🔱", "☀️"][i]}
 								</div>
 							))}
 						</div>
@@ -211,7 +221,7 @@ function HomePage() {
 								/>
 							))}
 							<span className="ml-1.5 font-medium text-foreground">4.9/5</span>
-							<span>from 200+ reviews</span>
+							<span>from practitioners</span>
 						</div>
 					</div>
 				</div>
@@ -248,10 +258,10 @@ function HomePage() {
 							Testimonials
 						</Badge>
 						<h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-							Loved by developers
+							Loved by practitioners
 						</h2>
 						<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-							Join thousands of developers who ship faster with ShipFast.
+							Join thousands who have deepened their practice with Japam.
 						</p>
 					</div>
 
@@ -290,10 +300,10 @@ function HomePage() {
 							Pricing
 						</Badge>
 						<h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-							Simple, transparent pricing
+							Simple, honest pricing
 						</h2>
 						<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-							No subscriptions. Pay once, build forever.
+							Free to start. Pay once for premium features, no subscriptions.
 						</p>
 					</div>
 
@@ -416,11 +426,11 @@ function HomePage() {
 
 						<div className="relative z-10">
 							<h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary-foreground mb-4">
-								Ready to ship faster?
+								Begin your practice today
 							</h2>
 							<p className="text-base md:text-lg text-primary-foreground/80 mb-10 max-w-xl mx-auto leading-relaxed">
-								Join 2,000+ developers building their next SaaS with ShipFast.
-								Stop setting up infrastructure and start building features.
+								Download Japam and bring focus, discipline, and peace to your
+								daily mantra recitation. Free to start, no account needed.
 							</p>
 
 							<div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
@@ -430,7 +440,7 @@ function HomePage() {
 									asChild
 								>
 									<Link to="/auth">
-										Get Started Free
+										Start Practicing
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
 								</Button>
@@ -438,7 +448,7 @@ function HomePage() {
 
 							<div className="max-w-md mx-auto">
 								<p className="text-sm text-primary-foreground/60 mb-3">
-									Or subscribe to our newsletter
+									Get notified when we launch on the App Store
 								</p>
 								<div className="rounded-full bg-white/10 backdrop-blur-sm p-1.5 flex flex-col sm:flex-row gap-1.5">
 									<div className="relative flex-1">
@@ -453,7 +463,7 @@ function HomePage() {
 										size="sm"
 										className="h-10 rounded-full px-6 bg-white text-primary hover:bg-white/90 font-medium shrink-0"
 									>
-										Subscribe
+										Notify Me
 									</Button>
 								</div>
 								<p className="text-xs text-primary-foreground/40 mt-3">
@@ -464,7 +474,6 @@ function HomePage() {
 					</div>
 				</div>
 			</section>
-
 		</div>
 	);
 }
