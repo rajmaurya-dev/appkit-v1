@@ -1,7 +1,8 @@
 export { FeaturesSection } from "./features-section";
-export { AuthCard } from "./auth-card";
-export { EdgeApiCard } from "./edge-api-card";
-export { TypeSafeCard } from "./typesafe-card";
-export { DrizzleCard } from "./drizzle-card";
-export { UIComponentsCard } from "./ui-components-card";
-export { DeployCard } from "./deploy-card";
+export { FeatureCard } from "./feature-card";
+export { MantraLibraryCard } from "./mantra-library-card";
+export { JapaCounterCard } from "./japa-counter-card";
+export { StreakCard } from "./streak-card";
+export { MalaBeadsCard } from "./mala-beads-card";
+export { DevanagariCard } from "./devanagari-card";
+export { OfflineCard } from "./offline-card";

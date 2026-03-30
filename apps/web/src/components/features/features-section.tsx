@@ -1,10 +1,10 @@
 import { Badge } from "@/components/ui/badge";
-import { AuthCard } from "./auth-card";
-import { DeployCard } from "./deploy-card";
-import { DrizzleCard } from "./drizzle-card";
-import { EdgeApiCard } from "./edge-api-card";
-import { TypeSafeCard } from "./typesafe-card";
-import { UIComponentsCard } from "./ui-components-card";
+import { DevanagariCard } from "./devanagari-card";
+import { JapaCounterCard } from "./japa-counter-card";
+import { MalaBeadsCard } from "./mala-beads-card";
+import { MantraLibraryCard } from "./mantra-library-card";
+import { OfflineCard } from "./offline-card";
+import { StreakCard } from "./streak-card";
 
 export function FeaturesSection() {
 	return (
@@ -15,21 +15,21 @@ export function FeaturesSection() {
 						Features
 					</Badge>
 					<h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-						Everything you need to ship
+						Everything for your daily sadhana
 					</h2>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-						Fully configured with authentication, database, UI components, and
-						edge-first APIs. No boilerplate fatigue.
+						A focused, beautiful app for mantra recitation — with Devanagari
+						text, japa counting, mala beads, and streak tracking.
 					</p>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-					<AuthCard />
-					<EdgeApiCard />
-					<TypeSafeCard />
-					<DrizzleCard />
-					<UIComponentsCard />
-					<DeployCard />
+					<MantraLibraryCard />
+					<JapaCounterCard />
+					<StreakCard />
+					<MalaBeadsCard />
+					<DevanagariCard />
+					<OfflineCard />
 				</div>
 			</div>
 		</section>
